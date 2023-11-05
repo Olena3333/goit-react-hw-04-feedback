@@ -28,17 +28,11 @@ export const App = () => {
       default:
         break;
     }
-    // console.log(name);
-    // this.setState(prevState => ({ [name]: prevState[name] + 1 }));
   };
 
   const countTotalFeedback = () => {
     const total = good + neutral + bad;
     return total;
-    // const { good, neutral, bad } = this.state;
-    // const total = good + neutral + bad;
-    // // console.log(total);
-    // return total;
   };
   const countPositiveFeedbackPercentage = () => {
     const total = countTotalFeedback();
@@ -46,11 +40,6 @@ export const App = () => {
       return 0;
     }
     return Number(((good / total) * 100).toFixed(2));
-
-    // const { good } = this.state;
-    // const total = this.countTotalFeedback();
-    // // console.log(total);
-    // return Math.round((good / total) * 100) || 0;
   };
 
   const total = countTotalFeedback();
